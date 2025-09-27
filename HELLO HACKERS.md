@@ -3,7 +3,7 @@
 **Date:** 2025-09-22
 
 ## My solve
-**Flag:** `pwn.college{gpK8CJP2puAmJUMzUfDdjCc6voZ.QX3YjM1wSN0EzNzEzW}`
+**Flag:** 'pwn.college{wkh85SGn5dETq3x8q0ydcrhZfup.QX3YjM1wCM2kzNzEzW}`
 
 ## Steps
 1. Logged in to the dojo using SSH.
