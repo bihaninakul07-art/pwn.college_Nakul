@@ -1,6 +1,7 @@
 # PROCESSES AND JOBS
 # LISTING PROCESSES
-**FLAG**:pwn.college{gxskEmiGfB-9nf0pD_kN4mrTa8o.QX4MDO0wCM2kzNzEzW}
+This challenge teaches us how to use ps
+**FLAG**:```pwn.college{gxskEmiGfB-9nf0pD_kN4mrTa8o.QX4MDO0wCM2kzNzEzW}```
 CODE:
 ```wsl
 Connected!
@@ -23,9 +24,17 @@ Yahaha, you found me! Here is your flag:
 pwn.college{gxskEmiGfB-9nf0pD_kN4mrTa8o.QX4MDO0wCM2kzNzEzW}
 Now I will sleep for a while (so that you could find me with 'ps').
 ```
+# What I Learned
+How to use ps command
+
+# Refrence
+pwn.college
+
 # KILLING PROCESSES
-**FLAG**:pwn.college{sWDw4Dt9nVKMhmoxk06BzX2rOyP.QXyQDO0wCM2kzNzEzW}
-CODE:
+Teaches us how to use kill command
+
+**FLAG**:```pwn.college{sWDw4Dt9nVKMhmoxk06BzX2rOyP.QXyQDO0wCM2kzNzEzW}
+CODE```
 ```wsl
 Connected!
 hacker@processes~killing-processes:~$ ps -efww | grep /challenge/dont_run
@@ -40,9 +49,16 @@ hacker@processes~killing-processes:~$ /challenge/run
 Great job! Here is your payment:
 pwn.college{sWDw4Dt9nVKMhmoxk06BzX2rOyP.QXyQDO0wCM2kzNzEzW}
 ```
+# What I Learned
+How to use kill command
+
+# Refrence
+pwn.college
+
 # INTERRUPTING PROCESSES
-**FLAG**:pwn.college{sOPislCZXQn9jnVkcYTN6DSP_QX.QXzQDO0wCM2kzNzEzW}
-CODE:
+Teaches us how to use cntr-C during /challenge/run
+**FLAG**:```pwn.college{sOPislCZXQn9jnVkcYTN6DSP_QX.QXzQDO0wCM2kzNzEzW}
+CODE```
 ```wsl
 Connected!
 hacker@processes~interrupting-processes:~$ /challenge/run
@@ -52,6 +68,11 @@ you can force me to exit with Ctrl-C. Try it now!
 Good job! You have used Ctrl-C to interrupt this process! Here is your flag:
 pwn.college{sOPislCZXQn9jnVkcYTN6DSP_QX.QXzQDO0wCM2kzNzEzW}
 ```
+# What I Learned
+Having fun with program
+
+# Reference
+pwn.college
 # KILLING MISBEHAVING PROCESSES
 **FLAG**:
 CODE:
@@ -122,7 +143,14 @@ pwn.college{GZjHhZAbFz33LWmP28sguj3VYA3.NEt2Eih36CakfT.AUCB}
 pwn.college{6i3UJPyfFpyXw2a8NG0cjUw4jieHIUGrdzibvbXi.ULPSPs}
 pwn.college{ipZTL9KbRlECjoKQ7blthnmMMXY2xWF6GwObB6NcJsRigbI}
 ```
+# What I Learned
+How to understand the misbehaving program
+
+# Reference
+pwn.college
+
 # SUSPENDING PROCESSES
+Teaches u show to suspend a process
 **FLAG**:pwn.college{8QeH1TnPb-qhzAk-K1A4rHjCzkk.QX1QDO0wCM2kzNzEzW}
 code:
 ```wsl
@@ -153,6 +181,11 @@ root         147     145  0 14:32 pts/0    00:00:00 ps -f
 Yay, I found another version of me! Here is the flag:
 pwn.college{8QeH1TnPb-qhzAk-K1A4rHjCzkk.QX1QDO0wCM2kzNzEzW}
 ```
+#What I Learned
+How to suspend a file
+
+#Reference
+pwn.college
 # RESUMING PROCESSES
 **FLAG**:pwn.college{wEvItvs8pE9vRRmFCKxOwR3YQ0g.QX2QDO0wCM2kzNzEzW}
 code:
