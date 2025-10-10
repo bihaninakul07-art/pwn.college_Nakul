@@ -1,6 +1,6 @@
 # DATA MANIPULATION
 
-This module covers common data-processing utilities (`tr`, `head`, `cut`, `sort`) and shows how to manipulate piped input, delete characters, remove newlines, extract lines or fields, and sort data.
+## This module covers common data-processing utilities (`tr`, `head`, `cut`, `sort`) and shows how to manipulate piped input, delete characters, remove newlines, extract lines or fields, and sort data.
 ---
 # TRANSLATING CHARACTERS
 **MY FLAG**:pwn.college{sHVZESfRhX7-JKZuN14haS4ix6U.01MxEzNxwCM2kzNzEzW}
