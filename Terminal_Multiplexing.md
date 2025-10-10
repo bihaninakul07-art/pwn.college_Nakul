@@ -169,18 +169,13 @@ Congratulations, here is your flag: pwn.college{gNuCQWfmEw907T08hDOTYKQxGja.0VO4
 **Flag**
 
 ```
-pwn.college{sbI1iGtkwdcBlKr6ACJ6TvzgYvQ.0FM5IDOxwSNxIzNzEzW}
+
 ```
 
 **Terminal**
 
 ```bash
-hacker@terminal-multiplexing~switching-windows-tmux:~$ cat <<MSG
-> Excellent work! You found window 0!
-> Here is your flag: pwn.college{sbI1iGtkwdcBlKr6ACJ6TvzgYvQ.0FM5IDOxwSNxIzNzEzW}
-> MSG
-Excellent work! You found window 0!
-Here is your flag: pwn.college{sbI1iGtkwdcBlKr6ACJ6TvzgYvQ.0FM5IDOxwSNxIzNzEzW}
+
 ```
 
 **What I learned**
