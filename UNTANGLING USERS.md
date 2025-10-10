@@ -1,3 +1,19 @@
+# Untangling Users — Formatted Solutions
+
+This module explores user identity and privilege escalation on Linux (`su`, `sudo`, password cracking, switching users). Each challenge contains the **goal**, **flag**, the **terminal session** (in a `bash` code block), **what I learned**, and **references**.
+
+---
+## Becoming Root with `su`
+
+**Goal:** Become `root` using `su` and read the flagged file.
+
+**Flag**
+
+```
+pwn.college{EVyNW_t5KABnf7y_Z7ZxCih56CE.QX1UDN1wCM2kzNzEzW}
+```
+
+**Terminal**
 ```wsl
 Connected!
 hacker@users~becoming-root-with-su:~$ su
@@ -5,6 +21,25 @@ Password:
 root@users~becoming-root-with-su:/home/hacker# cat /flag
 pwn.college{EVyNW_t5KABnf7y_Z7ZxCih56CE.QX1UDN1wCM2kzNzEzW}
 ```
+**What I learned**
+
+* `su` switches to another user (default `root`) with the target user’s password. Once root, you can access privileged files.
+
+**References**
+
+* pwn.college
+
+## Other Users with `su - username`
+
+**Goal:** Switch to a specific user (`zardus`) and run the challenge binary.
+
+**Flag**
+
+```
+pwn.college{kJLCkn_mhkEKr2NYTMIC5co_vaP.QX2UDN1wCM2kzNzEzW}
+```
+
+**Terminal**
 ```wsl
 hacker@users~other-users-with-su:~$ su - zardus
 WARNING: you are invoking 'su' without specifying the 'zardus' user.
@@ -13,6 +48,27 @@ zardus@users~other-users-with-su:~$ /challenge/run
 Congratulations, you have become Zardus! Here is your flag:
 pwn.college{kJLCkn_mhkEKr2NYTMIC5co_vaP.QX2UDN1wCM2kzNzEzW}
 ```
+**What I learned**
+
+* `su - username` switches to another user and loads their login environment.
+
+**References**
+
+* pwn.college
+
+---
+## Cracking Passwords (john)
+
+**Goal:** Use `john` to crack leaked password hashes, then `su` to log in as that user.
+
+**Flag**
+
+```
+pwn.college{kOJDwtRvVId8KQS2bLbvHZhoh92.QX3UDN1wCM2kzNzEzW}
+```
+
+**TerminaL**
+
 ```wsl
 hacker@users~cracking-passwords:~$ ls -l /challenge/shadow-leak
 -rw-r--r-- 1 root root 858 Oct 10 15:31 /challenge/shadow-leak
@@ -80,6 +136,28 @@ zardus@users~cracking-passwords:~$ /challenge/run
 Congratulations, you have become Zardus! Here is your flag:
 pwn.college{kOJDwtRvVId8KQS2bLbvHZhoh92.QX3UDN1wCM2kzNzEzW}
 ```
+**What I learned**
+
+* `john` (John the Ripper) can crack weak hashes found in leaked files; compromised credentials let you switch users.
+* Always protect password hashes and use strong passwords.
+
+**References**
+
+* pwn.college
+* John the Ripper
+
+---
+## Using `sudo`
+
+**Goal:** Use `sudo` to run commands as root (or other users) without a password when permitted.
+
+**Flag**
+
+```
+pwn.college{smPhxtemry_JdthQXj9oZctfED5.QX4UDN1wCM2kzNzEzW}
+```
+
+**Terminal**
 ```wsl
 hacker@users~using-sudo:~$ sudo /challenge/run
 In the olden days, a typical Linux system had a `root` password that administrators would use to `su` to root (after logging into their account with their normal account password).
@@ -122,3 +200,12 @@ When you launch a challenge in Privileged Mode (by clicking the `Privileged` but
 hacker@users~using-sudo:~$ sudo cat /flag
 pwn.college{smPhxtemry_JdthQXj9oZctfED5.QX4UDN1wCM2kzNzEzW}
 ```
+**What I learned**
+
+* `sudo` executes commands as another user (commonly root). `NOPASSWD` in `/etc/sudoers` allows running permitted commands without supplying a password.
+* `sudo` provides finer-grained and auditable privilege delegation compared to `su`.
+
+**References**
+
+* pwn.college
+* `man sudo`
