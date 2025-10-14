@@ -138,7 +138,7 @@ Correct usage! Your flag: pwn.college{Ewyuk0JP3ukFCgiRp3F5SEfXWQ8.QX3IDO0wCM2kzN
 ```
 
 ### My solve
-Used `--help` to discover available options; `-p` printed the secret value (375) required by `-g`, and `-g 375` produced the flag.
+Used `--help` to discover available options; `-p` printed the secret value (33) required by `-g`, and `-g 33` produced the flag.
 
 ### What I learned
 `--help` is a quick way to discover usage and option semantics when a manpage is absent.
