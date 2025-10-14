@@ -27,7 +27,7 @@ bash I/O redirection docs.
 What the challenge asks: Redirect the stdout of `/challenge/run` into a file named `myflag` so the challenge writes the flag into that file.
 
 **Flag:** `pwn.college{ICNEUq4xzUZMao0PH6D6Ggrb2iP.QX1YTN0wCM2kzNzEzW}`
-
+```wsl
 Connected!
 hacker@piping~redirecting-more-output:~$ /challenge/run > myflag
 [PASS] Success! You have satisfied all execution requirements.
